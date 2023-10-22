@@ -1,5 +1,16 @@
 .{
     .name = "zig-rlottie",
     .version = "0.1.0",
-    .dependencies = .{},
+    .paths = .{
+        "src/",
+        "build.zig",
+        "build.zig.zon",
+        "README.md",
+    },
+    .dependencies = .{
+        .librlottie = .{
+            .url = "https://github.com/koenigskraut/rlottie-tg/archive/08f1e15a61a97f4bae37041c2ea742f517b2824c.tar.gz",
+            .hash = "1220b3428323513a2eaacae0c49405d9da7b65c8fb8eacf260f61704b55d096cdf94",
+        },
+    },
 }
