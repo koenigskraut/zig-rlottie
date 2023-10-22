@@ -12,5 +12,5 @@ pub fn build(b: *std.Build) void {
     const zig_lottie_module = b.addModule("zig-rlottie", .{ .source_file = .{ .path = "src/library.zig" }, .dependencies = &.{} });
     _ = zig_lottie_module;
     const rlottie_lib = dep.artifact("rlottie");
-    _ = rlottie_lib;
+    _ = b.addInstallArtifact(rlottie_lib, .{});
 }
